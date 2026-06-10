@@ -42,22 +42,50 @@
 
 
 
-# 9-masala
+# # 9-masala
+# data = [("juft" if i % 2 ==0 else "toq" ) for i in range(1,11)]
+# print(data)
+
+
+# # 10-masala
+# data = [100000, 250000, 50000, 300000]
+# new = [(i * 1.1 if i > 200000 else i*1) for i in data]
+# print(new)
+
+
+# # 11-masala
+# new = [(i, j) for i in range(1, 4) for j in range(1, 5)]
+# print(new)
+        
+
+# # 12-masala
+# matrix = [
+#     [1, 2, 3],
+#     [4, 5, 6],
+#     [7, 8, 9]
+# ]
+
+# new = [j for i in matrix for j in i]
+# print(new)
+
+
+# # 13-masala
+# text = "Assalomu alaykum"
+# unlilar = ['a', 'i', 'e', 'o', 'u', 'A', 'I', 'E', 'O', 'U', "o'", "O'"]
+
+# new = [i for i in text if i in unlilar]
+# print(new)
 
 
 
 
 
+# 14-masala
 
 
-
-
-
-
-
-
-
-
+# 15-masala
+data = [(i, j, i * j) for i in range(1, 11) for j in range(1, 11)]
+print(data)
 
 
 
