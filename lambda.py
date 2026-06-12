@@ -106,29 +106,78 @@ print(sorted_fayllar)
 
 
 # 14-masala
+students = [
+    ("Ali", 20, 85),
+    ("Vali", 18, 90),
+    ("Sami", 20, 75),
+    ("Anvar", 18, 80),
+    ("Jasur", 20, 85)
+]
+sorted_students = sorted(students, key=lambda x: (x[1], x[2]))
+print(sorted_students)
 
 
 
 
 
+# 15-masala
+people = [
+    ("Ali", "Karimov"),
+    ("Vali", "Toshmatov"),
+    ("Sami", "Ergashev"),
+    ("Anvar", "Qodirov"),
+    ("Jasur", "Rahimov"),
+    ("Aziza", "Yuldasheva"),
+    ("Malika", "Usmonova"),
+    ("Dilshod", "Abdullayev"),
+    ("Bobur", "Xolmatov"),
+    ("Zarina", "Mamatqulova")
+]
+
+sorted_people = sorted(people, key = lambda x: x[-1][-1])
+print(sorted_people)
 
 
 
 
 
+# 16-masala
+sonlar = [34, 235, 32, 45, 96, 395, 346, 23, 56]
+kublar = list(map(lambda x: x**3, sonlar))
+print(kublar)
 
 
 
 
+# 17-masala
+ismlar = ["Azizillo", "Sardor", "Diyorbek", "Gulnora", "Sami"]
+sorted_reverse = sorted(ismlar, key = lambda x: len(x), reverse=True)
+print(sorted_reverse)
+
+
+
+# 18-masala
+mahsulotlar = ["Olma", "Banan", "Apelsin", "Anor", "Uzum", "Gilos", "Ananas", "Qovun", "Tarvuz", "Limon"]
+sorted_mahsulotlar = sorted(mahsulotlar, key = lambda x: x[0])
+print(sorted_mahsulotlar)
 
 
 
 
+# 19-masala
+gap = "Assalomu alekum qadrli ustozlar va aziz talabalar"
+sorted_gap = sorted(gap.split(), key = lambda x: len(x))
+print(sorted_gap)
 
 
 
 
+# 20-masala
 
+maks = lambda x: max(x)
+minn = lambda x: min(x)
 
+print(maks([3, 5, 31, 7, 25, 9, 11, 32, 54, 76, 98]))
+print(minn([3, 5, 31, 7, 25, 9, 11, 32, 54, 76, 98]))    
 
 
