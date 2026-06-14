@@ -1,203 +1,203 @@
 from collections import namedtuple
 
 
-# # 1
-# Student = namedtuple("User", ["name", "age", "group"])
+# 1
+Student = namedtuple("User", ["name", "age", "group"])
 
-# ism = input("Ism: ")
-# yosh = int(input("Yosh : "))
-# guruh = input("Guruh : ")
+ism = input("Ism: ")
+yosh = int(input("Yosh : "))
+guruh = input("Guruh : ")
 
-# user1 = Student(ism, yosh, guruh)
-# print(user1._asdict())
-
-
-
-# # 2
-# Book = namedtuple("Book", ["title", "author", "year"])
-# b = Book("O'tkan kunlar", "Abdulla Qodiriy", 1920)
-# print(b.author)
+user1 = Student(ism, yosh, guruh)
+print(user1._asdict())
 
 
 
-
-# # 3
-# Point = namedtuple("Point", ['x' , 'y'])
-# A = Point(2, 4)
-# print(A.x)
-# print(A.y)
+# 2
+Book = namedtuple("Book", ["title", "author", "year"])
+b = Book("O'tkan kunlar", "Abdulla Qodiriy", 1920)
+print(b.author)
 
 
 
 
-# # 4
-# Car = namedtuple("Car", ["brand", "model", "year"])
-# c1 = Car("Chevrolet", "Cobalt", 2025)
-# print(c1.brand, c1.model, c1.year)
-
-
-
-# # 5
-# Student = namedtuple("Student", ["name", "age", "score"])
-# students = [
-#     Student("Azizillo", 19, 80),
-#     Student("Ali", 20, 95),
-#     Student("Vali", 21, 88),
-#     Student("Sardor", 18, 76),
-#     Student("Jasur", 22, 91)
-# ]
-
-# maks = max(students, key = lambda x: x.score)
-# print(maks._asdict())
+# 3
+Point = namedtuple("Point", ['x' , 'y'])
+A = Point(2, 4)
+print(A.x)
+print(A.y)
 
 
 
 
-
-# # 6
-# Product = namedtuple('Product', ['name', 'price', 'quantity'])
-
-# mahsulotlar_royxati = [
-#     Product("Noutbuk", 800, 3),
-#     Product("Telefon", 400, 5),
-#     Product("Sichqoncha", 15, 10),
-#     Product("Klaviatura", 25, 4),
-#     Product("Monitor", 150, 2)
-# ]
-# new = list(map(lambda x: (x.name, x.price * x.quantity), mahsulotlar_royxati))
-# print(new)
+# 4
+Car = namedtuple("Car", ["brand", "model", "year"])
+c1 = Car("Chevrolet", "Cobalt", 2025)
+print(c1.brand, c1.model, c1.year)
 
 
 
-# # 7
-# Employee = namedtuple("Employee", ["name", "salary"])
+# 5
+Student = namedtuple("Student", ["name", "age", "score"])
+students = [
+    Student("Azizillo", 19, 80),
+    Student("Ali", 20, 95),
+    Student("Vali", 21, 88),
+    Student("Sardor", 18, 76),
+    Student("Jasur", 22, 91)
+]
 
-# e1 = Employee("Azizilll", 2000)
-# e2 = e1._replace(salary = e1.salary * 1.2)
-# print(e2)
+maks = max(students, key = lambda x: x.score)
+print(maks._asdict())
+
+
+
+
+
+# 6
+Product = namedtuple('Product', ['name', 'price', 'quantity'])
+
+mahsulotlar_royxati = [
+    Product("Noutbuk", 800, 3),
+    Product("Telefon", 400, 5),
+    Product("Sichqoncha", 15, 10),
+    Product("Klaviatura", 25, 4),
+    Product("Monitor", 150, 2)
+]
+new = list(map(lambda x: (x.name, x.price * x.quantity), mahsulotlar_royxati))
+print(new)
+
+
+
+# 7
+Employee = namedtuple("Employee", ["name", "salary"])
+
+e1 = Employee("Azizilll", 2000)
+e2 = e1._replace(salary = e1.salary * 1.2)
+print(e2)
 
 
 
 
 # 8
-# City = namedtuple('City', ['name', 'population'])
+City = namedtuple('City', ['name', 'population'])
 
-# shaharlar_royxati = [
-#     City("Toshkent", 3000000),
-#     City("Samarqand", 550000),
-#     City("Buxoro", 280000),
-#     City("Andijon", 450000),
-#     City("Namangan", 65000),
-#     City("Farg'ona", 300000),
-#     City("Nukus", 330000),
-#     City("Qarshi", 27000),
-#     City("Urganch", 200000),
-#     City("Termiz", 19000)
-# ]
+shaharlar_royxati = [
+    City("Toshkent", 3000000),
+    City("Samarqand", 550000),
+    City("Buxoro", 280000),
+    City("Andijon", 450000),
+    City("Namangan", 65000),
+    City("Farg'ona", 300000),
+    City("Nukus", 330000),
+    City("Qarshi", 27000),
+    City("Urganch", 200000),
+    City("Termiz", 19000)
+]
 
-# new = list(filter(lambda x: x.population > 100000, shaharlar_royxati))
-# for i in new:
-#     print(i)
-
-
-
-
-# # 9
-# Student = namedtuple('Student', ['name', 'faculty', 'gpa'])
-
-# talabalar_royxati = [
-#     Student("Asadbek", "IT", 3.8),
-#     Student("Zilola", "Economics", 3.6),
-#     Student("Bekzod", "Medicine", 3.4),
-#     Student("Madina", "IT", 3.9),
-#     Student("Diyor", "Economics", 3.2),
-#     Student("Jasur", "Medicine", 3.7),
-#     Student("Shahnoza", "IT", 3.5),
-#     Student("Olimjon", "Economics", 3.9),
-#     Student("Guli", "Medicine", 3.1),
-#     Student("Sardor", "IT", 3.2),
-#     Student("Farrux", "Economics", 3.5),
-#     Student("Dina", "Medicine", 3.8),
-#     Student("Aziz", "IT", 3.7),
-#     Student("Lola", "Economics", 3.4),
-#     Student("Rustam", "Medicine", 3.3),
-#     Student("Malika", "IT", 4.0),
-#     Student("Siroj", "Economics", 3.8),
-#     Student("Laylo", "Medicine", 3.6),
-#     Student("Otabek", "IT", 3.1),
-#     Student("Yulduz", "Economics", 3.7)
-# ]
+new = list(filter(lambda x: x.population > 100000, shaharlar_royxati))
+for i in new:
+    print(i)
 
 
 
 
-# # 10
-# from collections import namedtuple
+# 9
+Student = namedtuple('Student', ['name', 'faculty', 'gpa'])
 
-# Order = namedtuple('Order', ['order_id', 'customer', 'amount'])
-
-# buyurtmalar_royxati = [
-#     Order(1, "Azizillo", 1200000),
-#     Order(2, "Ali", 450000),
-#     Order(3, "Vali", 1500000),
-#     Order(4, "Sardor", 300000),
-#     Order(5, "Jasur", 2500000),
-#     Order(6, "Zilola", 850000),
-#     Order(7, "Madina", 1100000),
-#     Order(8, "Diyor", 950000),
-#     Order(9, "Shahnoza", 150000),
-#     Order(10, "Olimjon", 3500000),
-#     Order(11, "Azizillo", 600000),
-#     Order(12, "Ali", 1250000),
-#     Order(13, "Guli", 700000),
-#     Order(14, "Sardor", 1800000),
-#     Order(15, "Jasur", 90000),
-#     Order(16, "Farrux", 2100000),
-#     Order(17, "Dina", 400000),
-#     Order(18, "Lola", 1350000),
-#     Order(19, "Rustam", 800000),
-#     Order(20, "Malika", 3100000),
-#     Order(21, "Azizillo", 950000),
-#     Order(22, "Siroj", 1700000),
-#     Order(23, "Laylo", 2300000),
-#     Order(24, "Otabek", 500000),
-#     Order(25, "Yulduz", 1050000),
-#     Order(26, "Ali", 300000),
-#     Order(27, "Vali", 120000),
-#     Order(28, "Sardor", 4100000),
-#     Order(29, "Jasur", 650000),
-#     Order(30, "Zilola", 1400000),
-#     Order(31, "Madina", 200000),
-#     Order(32, "Diyor", 1900000),
-#     Order(33, "Shahnoza", 850000),
-#     Order(34, "Olimjon", 1200000),
-#     Order(35, "Guli", 2600000),
-#     Order(36, "Farrux", 750000),
-#     Order(37, "Dina", 1150000),
-#     Order(38, "Lola", 450000),
-#     Order(39, "Rustam", 2200000),
-#     Order(40, "Malika", 600000),
-#     Order(41, "Siroj", 1300000),
-#     Order(42, "Laylo", 900000),
-#     Order(43, "Otabek", 3400000),
-#     Order(44, "Yulduz", 150000),
-#     Order(45, "Azizillo", 1850000),
-#     Order(46, "Ali", 550000),
-#     Order(47, "Vali", 2400000),
-#     Order(48, "Sardor", 700000),
-#     Order(49, "Jasur", 1650000),
-#     Order(50, "Zilola", 3200000)
-# ]
+talabalar_royxati = [
+    Student("Asadbek", "IT", 3.8),
+    Student("Zilola", "Economics", 3.6),
+    Student("Bekzod", "Medicine", 3.4),
+    Student("Madina", "IT", 3.9),
+    Student("Diyor", "Economics", 3.2),
+    Student("Jasur", "Medicine", 3.7),
+    Student("Shahnoza", "IT", 3.5),
+    Student("Olimjon", "Economics", 3.9),
+    Student("Guli", "Medicine", 3.1),
+    Student("Sardor", "IT", 3.2),
+    Student("Farrux", "Economics", 3.5),
+    Student("Dina", "Medicine", 3.8),
+    Student("Aziz", "IT", 3.7),
+    Student("Lola", "Economics", 3.4),
+    Student("Rustam", "Medicine", 3.3),
+    Student("Malika", "IT", 4.0),
+    Student("Siroj", "Economics", 3.8),
+    Student("Laylo", "Medicine", 3.6),
+    Student("Otabek", "IT", 3.1),
+    Student("Yulduz", "Economics", 3.7)
+]
 
 
-# max_order = max(buyurtmalar_royxati, key = lambda x: x.amount)
-# min_order = min(buyurtmalar_royxati, key = lambda x: x.amount)
-# than_1m = list(filter(lambda x: x.amount > 1000000, buyurtmalar_royxati))
 
 
-# print(max_order)
-# print(min_order)
-# print(f"1 mln so'mdan yuqori bo'lgan buyurtmalar soni : {len(than_1m)}")
+# 10
+from collections import namedtuple
+
+Order = namedtuple('Order', ['order_id', 'customer', 'amount'])
+
+buyurtmalar_royxati = [
+    Order(1, "Azizillo", 1200000),
+    Order(2, "Ali", 450000),
+    Order(3, "Vali", 1500000),
+    Order(4, "Sardor", 300000),
+    Order(5, "Jasur", 2500000),
+    Order(6, "Zilola", 850000),
+    Order(7, "Madina", 1100000),
+    Order(8, "Diyor", 950000),
+    Order(9, "Shahnoza", 150000),
+    Order(10, "Olimjon", 3500000),
+    Order(11, "Azizillo", 600000),
+    Order(12, "Ali", 1250000),
+    Order(13, "Guli", 700000),
+    Order(14, "Sardor", 1800000),
+    Order(15, "Jasur", 90000),
+    Order(16, "Farrux", 2100000),
+    Order(17, "Dina", 400000),
+    Order(18, "Lola", 1350000),
+    Order(19, "Rustam", 800000),
+    Order(20, "Malika", 3100000),
+    Order(21, "Azizillo", 950000),
+    Order(22, "Siroj", 1700000),
+    Order(23, "Laylo", 2300000),
+    Order(24, "Otabek", 500000),
+    Order(25, "Yulduz", 1050000),
+    Order(26, "Ali", 300000),
+    Order(27, "Vali", 120000),
+    Order(28, "Sardor", 4100000),
+    Order(29, "Jasur", 650000),
+    Order(30, "Zilola", 1400000),
+    Order(31, "Madina", 200000),
+    Order(32, "Diyor", 1900000),
+    Order(33, "Shahnoza", 850000),
+    Order(34, "Olimjon", 1200000),
+    Order(35, "Guli", 2600000),
+    Order(36, "Farrux", 750000),
+    Order(37, "Dina", 1150000),
+    Order(38, "Lola", 450000),
+    Order(39, "Rustam", 2200000),
+    Order(40, "Malika", 600000),
+    Order(41, "Siroj", 1300000),
+    Order(42, "Laylo", 900000),
+    Order(43, "Otabek", 3400000),
+    Order(44, "Yulduz", 150000),
+    Order(45, "Azizillo", 1850000),
+    Order(46, "Ali", 550000),
+    Order(47, "Vali", 2400000),
+    Order(48, "Sardor", 700000),
+    Order(49, "Jasur", 1650000),
+    Order(50, "Zilola", 3200000)
+]
+
+
+max_order = max(buyurtmalar_royxati, key = lambda x: x.amount)
+min_order = min(buyurtmalar_royxati, key = lambda x: x.amount)
+than_1m = list(filter(lambda x: x.amount > 1000000, buyurtmalar_royxati))
+
+
+print(max_order)
+print(min_order)
+print(f"1 mln so'mdan yuqori bo'lgan buyurtmalar soni : {len(than_1m)}")
 
 
 
